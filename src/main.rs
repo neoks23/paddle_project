@@ -107,9 +107,7 @@ fn paddle_movement_system(
         if keyboard_input.pressed(KeyCode::W) {
             direction.y += 1.0;
         }
-        if keyboard_input.pressed(KeyCode::S) {
-            direction.y -= 1.0;
-        }
+        direction.y -= 2.0;
         let translation = &mut transform.translation;
         // move the paddle horizontally
         translation.x += time.delta_seconds() * direction.x * paddle.speed;
